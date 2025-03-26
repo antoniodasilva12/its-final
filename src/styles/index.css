@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles - Only for admin sidebar */
+.admin-sidebar {
+  @apply overflow-y-auto;
+  max-height: calc(100vh - 180px);
+}
+
+.admin-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background-color: #1F2937;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
+  border-radius: 6px;
+}
+
+/* Student Dashboard Styles */
+.student-dashboard {
+  @apply bg-gray-50;
+}
+
+.student-card {
+  @apply bg-white rounded-lg shadow-sm p-6 transition-all duration-200;
+}
+
+.student-stats {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
+}
+
+.stat-card {
+  @apply flex items-center justify-between p-6 rounded-lg;
+}
+
+.room-card {
+  @apply bg-blue-600 text-white;
+}
+
+.payment-card {
+  @apply bg-green-600 text-white;
+}
+
+.maintenance-card {
+  @apply bg-orange-600 text-white;
+}
+
+/* Base styles */
+:root {
+  --bg-color: #f3f4f6;
+}
+
+body {
+  @apply bg-gray-50;
+  background-color: var(--bg-color);
+}
